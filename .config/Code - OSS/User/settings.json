@@ -47,7 +47,7 @@
   "latex-workshop.view.pdf.viewer": "tab",
   "latex-workshop.latex.outDir": "./tmp",
   "window.titleBarStyle": "custom",
-  "terminal.integrated.fontFamily": "\"Meslo LG M DZ for Powerline\"",
+  "terminal.integrated.fontFamily": "\"Source Code Pro\",\"Meslo LG M DZ for Powerline\"",
   "terminal.integrated.fontSize": 16,
   "java.errors.incompleteClasspath.severity": "ignore",
   "todo-tree.highlights.customHighlight": {
