@@ -1,0 +1,21 @@
+## https://intellij-support.jetbrains.com/hc/en-us/articles/207240985-Changing-IDE-default-directories-used-for-config-plugins-and-caches-storage
+
+export IDEA_PROPERTIES=$HOME/.config/JetBrains/idea.properties
+export CLION_PROPERTIES=$HOME/.config/JetBrains/clion.properties
+export PYCHARM_PROPERTIES=$HOME/.config/JetBrains/pycharm.properties
+export DATAGRIP_PROPERTIES=$HOME/.config/JetBrains/datagrip.properties
+export STUDIO_PROPERTIES=$HOME/.config/JetBrains/studio.properties
+export PHPSTORM_PROPERTIES=$HOME/.config/JetBrains/phpstorm.properties
+
+[ -d ~/.local/bin/Android/Sdk ] && \
+  export \
+    ANDROID_HOME="${HOME}/bin/Android/Sdk" \
+    ANDROID_SDK_ROOT="${HOME}/bin/Android/Sdk" \
+    PATH=${PATH}:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools
+
+[ -f ~/bin/bundletool/bin/bundletool.jar ] && \
+  export \
+    ANDROID_BUNDLETOOLS="${HOME}/bin/bundletool/bin" \
+    PATH=${PATH}:${ANDROID_BUNDLETOOLS}
+
+# vi:syntax=sh
