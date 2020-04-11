@@ -3,7 +3,7 @@ command_exists() {
 }
 
 psa() {
-  ps aux | grep $1 | grep -v grep
+  ps aux | grep $@ | grep -v grep
 }
 
 sysupdate() {
