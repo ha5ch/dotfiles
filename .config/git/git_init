@@ -1,0 +1,81 @@
+ALTERNATE_EMAIL="harald.schwab2@fh-joanneum.at"
+
+show_help() {
+  echo "git_init is a simple helper to automate git init process in some way"
+  echo "usage: "
+  echo -e "  ${1} [options]"
+  echo
+  echo "Options:"
+  echo -e "  -h, -?          display this help"
+  echo -e "  -e              change user.email to ${ALTERNATE_EMAIL}"
+  echo -e "  -E <email>      change user.email to <email>"
+  echo -e "  -r <repo>       set Remote-Repository 'origin' to <repo> (e.g. git@github.com:user/repo1)"
+  echo -e "  -R <name>       set name for Remote-Repository to <name> (instead of 'origin'), Just in combination with -r <repo>"
+  echo -e "  -c              check in all available files and make inital commit (message='inital commit')"
+  echo -e "  -C <message>    same as -c with your own commit-message <message>"
+  echo 
+}
+
+git_init() {
+  ## if an Alias is set for that Function, use that Alias instead to show in help. 
+  ##   if there are more than one Alias, take the first one
+  CALL_NAME=$(alias | grep ${0} | cut -d"=" -f1 | head -1) 
+  if [[ -z ${CALL_NAME} ]]; then
+    CALL_NAME=${0}
+  fi
+
+  while getopts "h?eE:r:R:cC:" opt; do 
+    case ${opt} in 
+      h|\?)
+        show_help ${CALL_NAME}
+        return 0
+        ;;
+      e)
+        CHANGE_EMAIL=1
+        ;;
+      E)
+        CHANGE_EMAIL=1
+        ALTERNATE_EMAIL=${OPTARG}
+        ;;
+      r)
+        REMOTE=${OPTARG}
+        REMOTE_NAME="origin"
+        ;;
+      R)
+        REMOTE_NAME=${OPTARG}
+        ;;
+      c)
+        DO_COMMIT=1
+        COMMIT_MESSAGE="inital commit"
+        ;;
+      C)
+        DO_COMMIT=1
+        COMMIT_MESSAGE=${OPTARG}
+        ;;
+      *)
+        show_help ${CALL_NAME}
+        return 0
+        ;;
+    esac
+  done
+
+  git init .
+  if [[ ${CHANGE_EMAIL} -eq 1 ]]; then
+    git config user.email ${ALTERNATE_EMAIL}
+  fi
+
+  if [[ -n ${REMOTE} ]]; then 
+    git remote add ${REMOTE_NAME} ${REMOTE}
+  fi
+
+  if [[ ${DO_COMMIT} -eq 1 ]]; then 
+    git add .
+    git commit -m ${COMMIT_MESSAGE}
+  fi
+
+  if [[ -n ${REMOTE} ]] && [[ ${DO_COMMIT} -eq 1 ]]; then
+    git push --set-upstream ${REMOTE_NAME} master    
+  fi 
+}
+
+alias giti=git_init
