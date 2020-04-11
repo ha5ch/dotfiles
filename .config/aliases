@@ -6,7 +6,7 @@ psa() {
   ps aux | grep $1 | grep -v grep
 }
 
-sysupdate_function() {
+sysupdate() {
   ## TODO... 
   if [ -f /etc/pacman.conf ]; then
     sudo pacman -Syyuu --noconfirm && sudo pacman -Qdtq --noconfirm | sudo pacman -Rs - --noconfirm && sudo pacman -Sc --noconfirm
@@ -14,7 +14,6 @@ sysupdate_function() {
     sudo apt update && sudo apt dist-upgrate -y && sudo apt autoremove -y && sudo apt autoclean
   fi
 }
-alias sysupdate="sysupdate_function"
 
 get_env() {
   # this function will return an env-var inside a .env-file
@@ -52,7 +51,6 @@ alias \
   l="ls -CF" \
   .="source" \
 ;
-
 command_exists xdg-open && alias open="xdg-open"
 
 # commandline
@@ -72,8 +70,9 @@ alias \
   gita="git add ." \
   gitr="git reset HEAD -- " \
   gitl="git log --oneline --decorate --all --graph" \
+  dotfiles="/usr/bin/git --git-dir=$HOME/.local/dotfiles.git --work-tree=$HOME"
 ;
-[ -f ~/config/git/git_init ] && source ~/.config/git/git_init
+[ -f ~/.config/git/git_init ] && source ~/.config/git/git_init
 
 # tmux
 command_exists tmux && alias \
@@ -96,5 +95,7 @@ for V in {7..20}; do
 done
 JAVA8="/usr/lib/jvm/java-8-openjdk"
 [ -d "$JAVA8" ] && export JAVA_HOME="$JAVA8" && PATH=${JAVA_HOME}/bin:$PATH
+
+unset -f command_exists
 
 # vim: ft=bash
