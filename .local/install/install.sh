@@ -38,3 +38,5 @@ dotfiles checkout > /dev/null 2>&1
 }
 
 dotfiles config --local status.showUntrackedFiles no
+dotfiles update-index --assume-unchanged $HOME/README.md
+rm $HOME/README.md
