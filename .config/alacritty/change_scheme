@@ -1,0 +1,17 @@
+#!/bin/bash
+ALACRITTY_CONF="$HOME/.config/alacritty/alacritty.yml"
+
+case "$1" in
+  l*)
+    SCHEME=slight
+    OPACITY=1.0
+    ;;
+  d*)
+    SCHEME=dracula
+    OPACITY=0.95
+    ;;
+  *) exit 1 ;;
+esac
+
+sed -i -r "s/(^colors: \*)(\w*)/\1${SCHEME}/" ${ALACRITTY_CONF} && sed -i -r "s/(^background_opacity: )([0-9\.]+)/\1${OPACITY}/" ${ALACRITTY_CONF}
+
