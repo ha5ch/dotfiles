@@ -12,6 +12,7 @@ plugins=(
   git
   zsh-autosuggestions
   docker
+  zsh-nvm
 )
 source $ZSH/oh-my-zsh.sh
 
