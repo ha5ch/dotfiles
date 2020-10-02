@@ -13,6 +13,7 @@ plugins=(
   zsh-autosuggestions
   docker
   zsh-nvm
+  vi-mode
 )
 source $ZSH/oh-my-zsh.sh
 
@@ -61,3 +62,6 @@ compinit
 if [ -d ~/.npm-global/bin ]; then
   export PATH=${PATH}:${HOME}/.npm-global/bin
 fi
+
+# vim mode
+bindkey -v
