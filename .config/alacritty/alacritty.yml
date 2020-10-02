@@ -227,7 +227,7 @@ background_opacity: 0.95
 #
 # To completely disable the visual bell, set its duration to 0.
 #
-visual_bell:
+bell:
   animation: Linear
   color: '0xffffff'
   duration: 0
@@ -409,7 +409,7 @@ cursor:
   # window is not focused.
   unfocused_hollow: true
 
-dynamic_title: true
+window.dynamic_title: true
 
 # Live config reload (changes require restart)
 live_config_reload: true

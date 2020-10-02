@@ -70,7 +70,7 @@ alias \
   gita="git add ." \
   gitr="git reset HEAD -- " \
   gitl="git log --oneline --decorate --all --graph" \
-  dotfiles="/usr/bin/git --git-dir=$HOME/.local/dotfiles.git --work-tree=$HOME"
+  dotfiles="/usr/bin/git --git-dir=$HOME/.local/dotfiles.git --work-tree=$HOME" \
 ;
 [ -f ~/.config/git/git_init ] && source ~/.config/git/git_init
 
