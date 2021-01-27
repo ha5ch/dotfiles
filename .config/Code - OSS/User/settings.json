@@ -139,7 +139,13 @@
   },
   "python.languageServer": "Microsoft",
   "java.project.importHint": false,
-  "java.requirements.JDK11Warning": false
+  "java.requirements.JDK11Warning": false,
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
 /*
 Extenstions:

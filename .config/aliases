@@ -62,6 +62,9 @@ alias \
 ;
 export LESS="-F -X $LESS" ## let less display information, that fits the screen directly
 
+# json pretty print (e.g. for `curl` calls ... curl https://someurl/ | pj)
+alias pj="python -m json.tool"
+
 # git
 alias \
   gits="git status" \
