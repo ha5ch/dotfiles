@@ -17,6 +17,26 @@ dotfiles() {
   /usr/bin/git --git-dir="$LOCAL_REPO" --work-tree="$HOME" $@
 }
 
+ohmyzsh() {
+  if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom} ]; then
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    rm ~/.zshrc*
+  fi
+  if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-nvm ]; then
+    git clone https://github.com/lukechilds/zsh-nvm ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-nvm
+  fi 
+  if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions ]; then
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+  fi 
+  source $HOME/.config/zsh/.zshrc
+}
+
+tmuxtheme() {
+  if [ ! -d $HOME/.config/tmux/tmux-themepack ]; then
+    git clone https://github.com/jimeh/tmux-themepack.git $HOME/.config/tmux/tmux-themepack
+  fi 
+}
+
 command -v git > /dev/null 2>&1 || { 
   echo "could not find git! please install git and run script again"
   exit 1
@@ -53,3 +73,8 @@ unset -f clone_dotfiles
   rm $HOME/README.md
 }
 
+ohmyzsh
+unset -f ohmyzsh
+
+tmuxtheme
+unset -f tmuxtheme
