@@ -8,7 +8,6 @@ email = hs@rigbit.at
 	ff = only
 [alias]
   a = add 
-  aa = add .
   au = add -u
 	b = brach
   bd = branch -d
