@@ -81,6 +81,7 @@ unset -f clone_dotfiles
   rm $HOME/README.md
 }
 [ ! -f $LOCAL_REPO/hooks/post-merge ] && {
+  chmod +x $HOME/.config/git/hooks/post-merge
   ln -sf $HOME/.config/git/hooks/post-merge $LOCAL_REPO/hooks/post-merge
 }
 
