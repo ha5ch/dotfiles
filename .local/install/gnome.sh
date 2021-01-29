@@ -69,7 +69,7 @@ function icons {
   done
 }
 
-#themes
+themes
 unset themes
 
 icons
