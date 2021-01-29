@@ -80,6 +80,9 @@ unset -f clone_dotfiles
   dotfiles update-index --assume-unchanged $HOME/README.md
   rm $HOME/README.md
 }
+[ ! -f $LOCAL_REPO/hooks/post-merge ] && {
+  ln -sf $HOME/.config/git/hooks/post-merge $LOCAL_REPO/hooks/post-merge
+}
 
 ohmyzsh force
 unset -f ohmyzsh
