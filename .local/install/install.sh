@@ -18,8 +18,15 @@ dotfiles() {
 }
 
 ohmyzsh() {
-  if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom} ]; then
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  ZSH=$HOME/.config/zsh/oh-my-zsh
+  ZSH_CUSTOM=$ZSH/custom
+  if [ -n "${1}" ];then
+    if [ -d ${ZSH:-~/.oh-my-zsh} ]; then
+      mv ${ZSH:-~/.oh-my-zsh} ${ZSH:-~/.oh-my-zsh}.bkp
+    fi
+  fi
+  if [ ! -d ${ZSH:-~/.oh-my-zsh} ]; then
+    git clone https://github.com/ohmyzsh/ohmyzsh.git $ZSH
     rm ~/.zshrc*
   fi
   if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-nvm ]; then
@@ -28,7 +35,7 @@ ohmyzsh() {
   if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions ]; then
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
   fi 
-  source $HOME/.config/zsh/.zshrc
+  # source $HOME/.config/zsh/.zshrc
 }
 
 tmuxtheme() {
@@ -73,7 +80,7 @@ unset -f clone_dotfiles
   rm $HOME/README.md
 }
 
-ohmyzsh
+ohmyzsh force
 unset -f ohmyzsh
 
 tmuxtheme
