@@ -22,6 +22,7 @@ ohmyzsh() {
   ZSH_CUSTOM=$ZSH/custom
   if [ -n "${1}" ];then
     if [ -d ${ZSH:-~/.oh-my-zsh} ]; then
+      [ -d ${ZSH:-~/.oh-my-zsh}.bkp ] && rm -rf ${ZSH:-~/.oh-my-zsh}.bkp
       mv ${ZSH:-~/.oh-my-zsh} ${ZSH:-~/.oh-my-zsh}.bkp
     fi
   fi
