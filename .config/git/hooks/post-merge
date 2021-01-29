@@ -1,0 +1,14 @@
+#!/bin/sh
+
+## Remove README.md from $HOME after pull
+## to keep $HOME clean but provide a README
+## on remote repository
+
+## you have to create a copy/symlink of this
+## file into $HOME/.local/dotfiles.git/hooks
+## e.g. `ln -sf $HOME/.config/git/hooks/post-merge $HOME/.local/dotfiles.git/hooks/`
+
+[ -f $HOME/README.md ] && {
+  /usr/bin/git --git-dir=$HOME/.local/dotfiles.git --work-tree=$HOME update-index --assume-unchanged $HOME/README.md
+  rm $HOME/README.md
+}
