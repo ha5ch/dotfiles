@@ -21,3 +21,21 @@ You can easily install it with the provided [install-script](). But keep in mind
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Rigbin/dotfiles/master/.local/install/install.sh)"
 ```
 
+## TODOs
+* automatically install/manage used gnome themes/icons
+  * [Juno](https://github.com/EliverLara/Juno)
+  * [Nordic](https://github.com/EliverLara/Nordic)
+  ```
+  gnome_theme() {
+    gsettings set org.gnome.desktop.interface gtk-theme "${1:-Juno}"
+    gsettings set org.gnome.desktop.wm.preferences theme "${1:-Juno}"
+    gsettings set org.gnome.shell.extensions.user-theme name "${1:-Juno}"
+  }
+  ```
+  * [Tela Icons](https://github.com/vinceliuice/Tela-icon-theme)
+* automatically install/manage used gnome extensions
+  * [gTile](https://github.com/gTile/gTile)
+  * [Swticher](https://github.com/daniellandau/switcher)
+  * [Unite](https://github.com/hardpixel/unite-shell)
+  * [Vitals](https://github.com/corecoding/Vitals)
+  * ...
