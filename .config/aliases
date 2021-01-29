@@ -1,3 +1,9 @@
+gnome_theme() {
+  gsettings set org.gnome.desktop.interface gtk-theme "${1:-Juno}"
+  gsettings set org.gnome.desktop.wm.preferences theme "${1:-Juno}"
+  gsettings set org.gnome.shell.extensions.user-theme name "${1:-Juno}"
+}
+
 command_exists() {
   command -v $1 2> /dev/null 1>&2
 }
