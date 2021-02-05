@@ -3,6 +3,20 @@
 ### Install/Pre-Config script for gnome desktop
 ### Download/Prepare Themes, Icons, Extensions, ...
 
+while getopts ait OPT; do
+  case $OPT in
+    a) 
+      RUN_THEMES="true"
+      RUN_ICONS="true"
+      ;;
+    i)
+      RUN_ICONS="true"
+      ;;
+    t)
+      RUN_THEMES="true"
+      ;;
+  esac
+done
 
 THEMES=(
   https://github.com/EliverLara/Juno.git
@@ -69,8 +83,15 @@ function icons {
   done
 }
 
-themes
-unset themes
+if [[ "$RUN_THEMES" == "true" ]]
+then
+  themes
+fi
+if [[ "$RUN_ICONS" == "true" ]]
+then
+  icons
+fi
 
-icons
+unset themes
 unset icons
+
