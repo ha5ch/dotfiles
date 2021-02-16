@@ -76,7 +76,7 @@ function icons {
       git clone $ICON $ICON_DIR
     }
     [ -f $ICONS_INST/$ICON_DIR/install.sh ] && {
-      $ICONS_INST/$ICON_DIR/install.sh
+      $ICONS_INST/$ICON_DIR/install.sh grey
     } || {
       ln -sf $ICONS_INST/$ICON_DIR $ICONS_HOME/$ICON_DIR
     }
