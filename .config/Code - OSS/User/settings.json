@@ -155,7 +155,10 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "tabnine.experimentalAutoImports": true,
-  "workbench.colorTheme": "Dracula"
+  "workbench.colorTheme": "Dracula",
+  "prettier.singleQuote": true,
+  "spellright.language": ["de_AT", "en_GB"],
+  "spellright.documentTypes": ["markdown", "latex", "plaintext"]
 }
 /*
 Extenstions:
