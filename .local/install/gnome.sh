@@ -65,9 +65,12 @@ function icons {
 
   for ICON in ${ICONS[@]}
   do
+    GHASH=""
     ICON_DIR=`echo $ICON | sed -En "s/.+?\/([A-Za-z-]+?)\.git$/\1/p"`
     [ -d $ICONS_INST/$ICON_DIR ] && {
       cd $ICONS_INST/$ICON_DIR
+      GHASH=`git rev-parse --short HEAD`
+      echo GHASH=$GHASH
       echo UPDATE $ICON IN $ICONS_INST/$ICON_DIR
       git pull
     } || {
@@ -76,7 +79,12 @@ function icons {
       git clone $ICON $ICON_DIR
     }
     [ -f $ICONS_INST/$ICON_DIR/install.sh ] && {
-      $ICONS_INST/$ICON_DIR/install.sh grey
+      if [ "$GHASH" != "`git rev-parse --short HEAD`" ]
+      then
+        $ICONS_INST/$ICON_DIR/install.sh grey
+      else
+        echo everything up to date in $ICON_DIR...
+      fi
     } || {
       ln -sf $ICONS_INST/$ICON_DIR $ICONS_HOME/$ICON_DIR
     }
