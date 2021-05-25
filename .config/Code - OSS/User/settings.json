@@ -158,7 +158,16 @@
   "workbench.colorTheme": "Dracula",
   "prettier.singleQuote": true,
   "spellright.language": ["de_AT", "en_GB"],
-  "spellright.documentTypes": ["markdown", "latex", "plaintext"]
+  "spellright.documentTypes": [
+    "markdown",
+    "latex",
+    "plaintext"
+  ],
+  "debug.javascript.usePreview": false,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always"
 }
 /*
 Extenstions:
