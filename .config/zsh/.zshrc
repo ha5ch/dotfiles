@@ -51,9 +51,6 @@ compinit
 # add ~/.local/bin to PATH
 [ -d ~/.local/bin ] && export PATH=${PATH}:${HOME}/.local/bin
 
-# add ~/.local/bin/Android/Sdk/platform-tools to PATH
-[ -d ~/.local/bin/Android/Sdk/platform-tools ] && export PATH=${PATH}:${HOME}/.local/bin/Android/Sdk/platform-tools
-
 # source JetBrains config
 [ -f ~/.config/JetBrains/jetbrainsrc ] && source ~/.config/JetBrains/jetbrainsrc
 
