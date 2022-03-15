@@ -12,6 +12,7 @@ plugins=(
   git
   zsh-autosuggestions
   docker
+  docker-compose
   zsh-nvm
   vi-mode
 )

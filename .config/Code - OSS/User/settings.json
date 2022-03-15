@@ -7,7 +7,6 @@
   },
   "vim.useCtrlKeys": false,
   "vim.useSystemClipboard": true,
-  "window.zoomLevel": 1,
   "keyboard.dispatch": "keyCode",
   "latex-workshop.message.update.show": false,
   "latex-workshop.latex.outputDir": "./tmp",
@@ -70,9 +69,6 @@
       "privateKeyPath": "/home/hasch/.ssh/smartlife.at",
       "rootPath": "/data/web/e46005/html/ctf/"
     }
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "deno.enable": false,
   "java.configuration.checkProjectSettingsExclusions": false,
@@ -139,13 +135,16 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "python.languageServer": "Microsoft",
+  "python.languageServer": "Default",
   "java.project.importHint": false,
   "java.requirements.JDK11Warning": false,
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
@@ -158,7 +157,8 @@
   "workbench.colorTheme": "Dracula",
   "prettier.singleQuote": true,
   "spellright.language": ["de_AT", "en_GB"],
-  "spellright.documentTypes": ["markdown", "latex", "plaintext"]
+  "spellright.documentTypes": ["markdown", "latex", "plaintext"],
+  "window.zoomLevel": 1
 }
 /*
 Extenstions:
