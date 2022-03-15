@@ -7,11 +7,13 @@ export DATAGRIP_PROPERTIES=$HOME/.config/JetBrains/datagrip.properties
 export STUDIO_PROPERTIES=$HOME/.config/JetBrains/studio.properties
 export PHPSTORM_PROPERTIES=$HOME/.config/JetBrains/phpstorm.properties
 
-[ -d ~/.local/bin/Android/Sdk ] && \
-  export \
-    ANDROID_HOME="${HOME}/bin/Android/Sdk" \
-    ANDROID_SDK_ROOT="${HOME}/bin/Android/Sdk" \
-    PATH=${PATH}:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools
+[[ -d $HOME/.local/bin/Android/Sdk ]] && {
+  export ANDROID_HOME=$HOME/.local/bin/Android/Sdk
+  export ANDROID_SDK_ROOT=$ANDROID_HOME
+  export PATH=$ANDROID_HOME/tools/bin/:$PATH
+  export PATH=$ANDROID_HOME/emulator/:$PATH
+  export PATH=$ANDROID_HOME/platform-tools/:$PATH
+}
 
 [ -f ~/bin/bundletool/bin/bundletool.jar ] && \
   export \

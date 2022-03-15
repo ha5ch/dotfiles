@@ -158,7 +158,12 @@
   "prettier.singleQuote": true,
   "spellright.language": ["de_AT", "en_GB"],
   "spellright.documentTypes": ["markdown", "latex", "plaintext"],
-  "window.zoomLevel": 1
+  "window.zoomLevel": 1,
+  "debug.javascript.usePreview": false,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always"
 }
 /*
 Extenstions:
