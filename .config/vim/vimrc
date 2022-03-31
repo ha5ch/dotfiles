@@ -78,10 +78,28 @@ nmap <C-c> :Lexplore<CR>
 imap <C-c> <Esc>:Lexplore<CR>
 
 
+""""""""""""""""""""""
+"Move lines Shortcuts"
+""""""""""""""""""""""
+nnoremap K :m .-2<CR>==
+nnoremap J :m .+1<CR>==
+nnoremap <S-UP> :m .-2<CR>==
+nnoremap <S-DOWN> :m .+1<CR>==
+nnoremap <A-UP> :m .-2<CR>==
+nnoremap <A-DOWN> :m .+1<CR>==
+vnoremap K :m '<-2<CR>gv=gv
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap <S-UP> :m '<-2<CR>gv=gv
+vnoremap <S-DOWN> :m '>+1<CR>gv=gv
+vnoremap <A-UP> :m '<-2<CR>gv=gv
+vnoremap <A-DOWN> :m '>+1<CR>gv=gv
+
 """"""""""""""""""""""""""""
 "Custom Shortcuts for Panes"
 """"""""""""""""""""""""""""
 nnoremap <C-p><C-v> :vsp 
+nnoremap <C-p><C-h> :sp 
+nnoremap <C-p><C-s> :sp 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Custom function to show diff for unsaved file                             "
