@@ -232,7 +232,7 @@ window:
 bell:
   animation: Linear
   color: '0xffffff'
-  duration: 0
+  duration: 2
 
 # Key bindings
 #

@@ -158,7 +158,7 @@
   "prettier.singleQuote": true,
   "spellright.language": ["de_AT", "en_GB"],
   "spellright.documentTypes": ["markdown", "latex", "plaintext"],
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 2,
   "debug.javascript.usePreview": false,
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -168,7 +168,9 @@
   "vim.vimrc.path": "~/.config/vim/vimrc",
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "editor.fontSize": 16
 }
 /*
 Extenstions:

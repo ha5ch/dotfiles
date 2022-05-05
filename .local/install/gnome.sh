@@ -19,8 +19,9 @@ while getopts ait OPT; do
 done
 
 THEMES=(
-  https://github.com/EliverLara/Juno.git
-  https://github.com/EliverLara/Nordic.git
+  #https://github.com/EliverLara/Juno.git
+  #https://github.com/EliverLara/Nordic.git
+  https://github.com/vinceliuice/Colloid-gtk-theme.git
 )
 ICONS=(
   https://github.com/vinceliuice/Tela-icon-theme.git
@@ -46,11 +47,20 @@ function themes {
       cd $THEMES_INST/$THEME_DIR
       echo UPDATE $THEME IN $THEMES_INST/$THEME_DIR
       git pull
+      [ -f $THEMES_INST/$THEME_DIR/install.sh ] && {
+        ## TODO: this options currently only work for Colloid!
+        $THEMES_INST/$THEME_DIR/install.sh -d $THEMES_HOME -t green -c dark --tweaks rimless
+      }
     } || {
       cd $THEMES_INST
       echo CLONE $THEME INTO $THEMES_INST/$THEME_DIR
       git clone $THEME $THEME_DIR
-      ln -sf $THEMES_INST/$THEME_DIR $THEMES_HOME/$THEME_DIR
+      [ -f $THEMES_INST/$THEME_DIR/install.sh ] && {
+        ## TODO: this options currently only work for Colloid!
+        $THEMES_INST/$THEME_DIR/install.sh -d $THEMES_HOME -t green -c dark --tweaks rimless
+      } || {
+        ln -sf $THEMES_INST/$THEME_DIR $THEMES_HOME/$THEME_DIR
+      } 
     }
   done
 }
