@@ -42,7 +42,7 @@ function themes {
 
   for THEME in ${THEMES[@]}
   do
-    THEME_DIR=`echo $THEME | sed -En "s/.+?\/(\w+?)\.git$/\1/p"`
+    THEME_DIR=`echo $THEME | sed -En "s/.+?\\/([^\\/\\.]+?)\.git$/\1/p"`
     [ -d $THEMES_INST/$THEME_DIR ] && {
       cd $THEMES_INST/$THEME_DIR
       echo UPDATE $THEME IN $THEMES_INST/$THEME_DIR
