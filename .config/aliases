@@ -110,6 +110,21 @@ done
 JAVA8="/usr/lib/jvm/java-8-openjdk"
 [ -d "$JAVA8" ] && export JAVA_HOME="$JAVA8" && PATH=${JAVA_HOME}/bin:$PATH
 
+# bluetooth
+## source: https://bbs.archlinux.org/viewtopic.php?id=258363; https://unix.stackexchange.com/questions/508221/bluetooth-service-running-but-bluetoothctl-says-org-bluez-error-notready
+earmic() {
+  BT_CARD=$(pacmd list-cards | gawk 'match($0, /\sname: <(bluez.*)>/,a) {print a[1]}')
+  if [ "$1" = "off" ]; then
+    PROFILE="a2dp_sink"
+  else
+    bluetoothctl power on
+    PROFILE="handsfree_head_unit"
+  fi
+
+  pacmd set-card-profile $BT_CARD $PROFILE
+}
+
+
 unset -f command_exists
 
 # vim: ft=bash
