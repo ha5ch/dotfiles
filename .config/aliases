@@ -79,7 +79,9 @@ alias \
   gita="git add ." \
   gitr="git reset HEAD -- " \
   gitl="git log --oneline --decorate --all --graph" \
+  gitd="git diff --color-words" \
   dotfiles="/usr/bin/git --git-dir=$HOME/.local/dotfiles.git --work-tree=$HOME" \
+  lg="lazygit" \
 ;
 [ -f ~/.config/git/git_init ] && source ~/.config/git/git_init
 
@@ -109,6 +111,12 @@ for V in {7..20}; do
 done
 JAVA8="/usr/lib/jvm/java-8-openjdk"
 [ -d "$JAVA8" ] && export JAVA_HOME="$JAVA8" && PATH=${JAVA_HOME}/bin:$PATH
+
+# android
+if [ -d $HOME/.local/Android/Sdk ]; then
+  export ANDROID_SDK_ROOT=$HOME/.local/Android/Sdk
+  export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/emulator
+fi
 
 # bluetooth
 ## source: https://bbs.archlinux.org/viewtopic.php?id=258363; https://unix.stackexchange.com/questions/508221/bluetooth-service-running-but-bluetoothctl-says-org-bluez-error-notready
