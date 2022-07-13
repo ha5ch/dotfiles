@@ -6,6 +6,7 @@ email = hs@rigbit.at
 [pull]
 	rebase = false
 	ff = only
+	autosetupremote = true
 [alias]
   a = add 
   au = add -u
@@ -25,3 +26,5 @@ email = hs@rigbit.at
   unstage = reset HEAD --
 [init]
 	defaultBranch = main
+[push]
+	autoSetupRemote = true
