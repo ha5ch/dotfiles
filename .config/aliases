@@ -118,6 +118,11 @@ if [ -d $HOME/.local/Android/Sdk ]; then
   export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/emulator
 fi
 
+# go
+if [ -d $HOME/.local/go/bin ]; then
+  export PATH=$PATH:$HOME/.local/go/bin
+fi
+
 # bluetooth
 ## source: https://bbs.archlinux.org/viewtopic.php?id=258363; https://unix.stackexchange.com/questions/508221/bluetooth-service-running-but-bluetoothctl-says-org-bluez-error-notready
 earmic() {
