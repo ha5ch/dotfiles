@@ -18,7 +18,7 @@ Used software/tools:
 You can easily install it with the provided [install-script](.local/install/install.sh). But keep in mind that it will maybe override some dotfiles on your system!
 
 ```console
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ha5ch/dotfiles/master/.local/install/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ha5ch/dotfiles/main/.local/install/install.sh)"
 ```
 
 ## TODOs
