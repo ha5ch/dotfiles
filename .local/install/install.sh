@@ -2,7 +2,7 @@
 
 ## install my dotfiles on your system
 
-REPO="https://github.com/Rigbin/dotfiles.git"
+REPO="https://github.com/ha5ch/dotfiles.git"
 LOCAL_REPO="${1:-$HOME/.local/dotfiles.git}" && LOCAL_REPO="${LOCAL_REPO%/}"
 LOCAL_BKP=${LOCAL_REPO%/}.bkp
 
