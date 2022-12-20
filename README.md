@@ -15,10 +15,10 @@ Used software/tools:
 * [git](https://git-scm.com/)
 
 ## Install
-You can easily install it with the provided [install-script](). But keep in mind that it will maybe override some dotfiles on your system!
+You can easily install it with the provided [install-script](.local/install/install.sh). But keep in mind that it will maybe override some dotfiles on your system!
 
 ```console
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/Rigbin/dotfiles/master/.local/install/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ha5ch/dotfiles/master/.local/install/install.sh)"
 ```
 
 ## TODOs
