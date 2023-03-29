@@ -79,6 +79,7 @@ alias \
   gita="git add ." \
   gitr="git reset HEAD -- " \
   gitl="git log --oneline --decorate --all --graph" \
+  gitlp="git log --pretty=format:'%an%x09%ad%x09%s'" \
   gitd="git diff --color-words" \
   dotfiles="/usr/bin/git --git-dir=$HOME/.local/dotfiles.git --work-tree=$HOME" \
   lg="lazygit" \
