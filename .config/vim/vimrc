@@ -21,7 +21,7 @@ set viminfo+=n~/.config/vim/viminfo
 "different indention for python
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 "deactivate 'expandtab' for makefiles
-autocm Filetype make setlocal noexpandtab
+autocmd Filetype make setlocal noexpandtab
 
 "whitespace settings
 set listchars=eol:$,tab:>-,space:.,trail:~,extends:>,precedes:<,nbsp:%
