@@ -13,24 +13,37 @@
   "latex-workshop.latex.recipes": [
     {
       "name": "pdflatex fh-toolchain",
-      "tools": ["create_tmp", "pdflatex", "biber", "pdflatex"]
+      "tools": [
+        "create_tmp",
+        "pdflatex",
+        "biber",
+        "pdflatex"
+      ]
     }
   ],
   "latex-workshop.latex.tools": [
     {
       "name": "biber",
       "command": "biber",
-      "args": ["./tmp/thesis.bcf"]
+      "args": [
+        "./tmp/thesis.bcf"
+      ]
     },
     {
       "name": "pdflatex",
       "command": "pdflatex",
-      "args": ["-output-directory=tmp", "%DOC%"]
+      "args": [
+        "-output-directory=tmp",
+        "%DOC%"
+      ]
     },
     {
       "name": "create_tmp",
       "command": "mkdir",
-      "args": ["-p", "./tmp"]
+      "args": [
+        "-p",
+        "./tmp"
+      ]
     }
   ],
   "latex-workshop.view.pdf.viewer": "tab",
@@ -49,12 +62,16 @@
     "type": "none"
   },
   "todo-tree.regex.regex": "((//|#|%+?|<!--|;|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])",
-  "todo-tree.general.tags": ["TODO", "FIXME", "todo"],
+  "todo-tree.general.tags": [
+    "TODO",
+    "FIXME",
+    "todo"
+  ],
   "[python]": {
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
     "editor.formatOnType": true,
-    //"editor.defaultFormatter": "ms-python.python"
+    // "editor.defaultFormatter": "ms-python.autopep8"
   },
   "remotefs.remote": {
     "smartlife": {
@@ -157,7 +174,10 @@
   "tabnine.experimentalAutoImports": true,
   "workbench.colorTheme": "Default Light+",
   "prettier.singleQuote": true,
-  "spellright.language": ["de_AT", "en_GB"],
+  "spellright.language": [
+    "de_AT",
+    "en_GB"
+  ],
   "spellright.documentTypes": [
     "markdown",
     "latex",
