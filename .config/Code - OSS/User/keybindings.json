@@ -26,5 +26,9 @@
     "key": "alt+j",
     "command": "editor.action.moveLinesDownAction",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+t",
+    "command": "workbench.action.toggleMaximizedPanel"
   }
 ]

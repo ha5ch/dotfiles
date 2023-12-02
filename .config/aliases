@@ -65,6 +65,7 @@ alias \
   df="df -h" \
   du="du -h" \
   se="sudoedit" \
+  sudo='sudo ' \
 ;
 export LESS="-F -X $LESS" ## let less display information, that fits the screen directly
 
@@ -110,8 +111,8 @@ for V in {7..20}; do
     ojc${V}=${ORACLEJDK}/bin/javac \
     ojh${V}="JAVA_HOME=${ORACLEJDK}"
 done
-JAVA8="/usr/lib/jvm/java-8-openjdk"
-[ -d "$JAVA8" ] && export JAVA_HOME="$JAVA8" && PATH=${JAVA_HOME}/bin:$PATH
+#JAVA8="/usr/lib/jvm/java-8-openjdk"
+#[ -d "$JAVA8" ] && export JAVA_HOME="$JAVA8" && PATH=${JAVA_HOME}/bin:$PATH
 
 # android
 if [ -d $HOME/.local/Android/Sdk ]; then

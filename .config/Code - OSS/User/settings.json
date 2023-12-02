@@ -52,7 +52,9 @@
   "todo-tree.general.tags": ["TODO", "FIXME", "todo"],
   "[python]": {
     "editor.tabSize": 4,
-    "editor.insertSpaces": true
+    "editor.insertSpaces": true,
+    "editor.formatOnType": true,
+    //"editor.defaultFormatter": "ms-python.python"
   },
   "remotefs.remote": {
     "smartlife": {
@@ -141,7 +143,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "[typescript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
@@ -150,10 +152,10 @@
     "editor.defaultFormatter": "vscode.html-language-features"
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "tabnine.experimentalAutoImports": true,
-  "workbench.colorTheme": "Dracula Soft",
+  "workbench.colorTheme": "Default Light+",
   "prettier.singleQuote": true,
   "spellright.language": ["de_AT", "en_GB"],
   "spellright.documentTypes": [
@@ -173,9 +175,29 @@
   },
   "editor.unicodeHighlight.nonBasicASCII": false,
   "editor.fontSize": 16,
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "workbench.iconTheme": "material-icon-theme",
-  "window.zoomLevel": 1,
-  "typescript.updateImportsOnFileMove.enabled": "always"
+  "git.openRepositoryInParentFolders": "never",
+  "markdown-preview-enhanced.previewTheme": "github-light.css",
+  "markdown-pdf.plantumlOpenMarker": "```plantuml",
+  "markdown-pdf.plantumlCloseMarker": "```",
+  "markdown-pdf.plantumlServer": "https://mode.fh-joanneum.at/-/plantuml",
+  "cSpell.language": "en,de-AT",
+  "workbench.editorAssociations": {
+    "*.pdf": "latex-workshop-pdf-hook"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "cSpell.userWords": [
+    "microcontrollers"
+  ],
+  "editor.renderWhitespace": "all",
+  "window.zoomLevel": 2,
+  "cSpell.enableFiletypes": [
+    "typst"
+  ],
+  "go.toolsManagement.autoUpdate": true,
 }
 /*
 Extenstions:

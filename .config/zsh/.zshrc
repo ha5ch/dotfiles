@@ -9,12 +9,13 @@ ZSH_THEME="robbyrussell"
 ENABLE_CORRECTION="true"
 
 plugins=(
-  git
-  zsh-autosuggestions
   docker
   docker-compose
-  zsh-nvm
+  git
+  golang
   vi-mode
+  zsh-autosuggestions
+  zsh-nvm
 )
 source $ZSH/oh-my-zsh.sh
 
@@ -56,6 +57,8 @@ compinit
 [ -f ~/.config/JetBrains/jetbrainsrc ] && source ~/.config/JetBrains/jetbrainsrc
 
 [ -d ~/.dotnet ] && export PATH=$HOME/.dotnet:$PATH
+
+[ -d ~/.config/go/bin ] && export PATH=$PATH:$HOME/.config/go/bin
 
 if [ -d ~/.npm-global/bin ]; then
   export PATH=${PATH}:${HOME}/.npm-global/bin

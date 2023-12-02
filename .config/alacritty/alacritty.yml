@@ -13,6 +13,7 @@ env:
   # `infocmp xterm-256color`.
   # TERM: xterm-256color-italic
   TERM: xterm-256color
+  WINIT_UNIX_BACKEND: 'x11'
 
 window:
   # Window dimensions (changes require restart)
@@ -205,7 +206,7 @@ colors: *dracula
 # Background opacity
 #background_opacity: 0.95
 window:
-  opacity: 0.9
+  opacity: 0.95
 
 # Visual Bell
 #
