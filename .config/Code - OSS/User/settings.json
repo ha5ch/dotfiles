@@ -8,8 +8,6 @@
   "vim.useCtrlKeys": false,
   "vim.useSystemClipboard": true,
   "keyboard.dispatch": "keyCode",
-  "latex-workshop.message.update.show": false,
-  "latex-workshop.latex.outputDir": "./tmp",
   "latex-workshop.latex.recipes": [
     {
       "name": "pdflatex fh-toolchain",
@@ -71,91 +69,16 @@
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
     "editor.formatOnType": true,
-    // "editor.defaultFormatter": "ms-python.autopep8"
+    "editor.defaultFormatter": "ms-python.autopep8"
   },
-  "remotefs.remote": {
-    "smartlife": {
-      "scheme": "sftp",
-      "host": "ssh.ws.smartlife.at",
-      "username": "e46005",
-      "privateKeyPath": "/home/hasch/.ssh/smartlife.at",
-      "rootPath": "/data/web/e46005/"
-    },
-    "smartlife_CTF": {
-      "scheme": "sftp",
-      "host": "ssh.ws.smartlife.at",
-      "username": "e46005",
-      "privateKeyPath": "/home/hasch/.ssh/smartlife.at",
-      "rootPath": "/data/web/e46005/html/ctf/"
-    }
-  },
-  "deno.enable": false,
-  "java.configuration.checkProjectSettingsExclusions": false,
-  "peacock.favoriteColors": [
-    {
-      "name": "Angular Red",
-      "value": "#b52e31"
-    },
-    {
-      "name": "Auth0 Orange",
-      "value": "#eb5424"
-    },
-    {
-      "name": "Azure Blue",
-      "value": "#007fff"
-    },
-    {
-      "name": "C# Purple",
-      "value": "#68217A"
-    },
-    {
-      "name": "Gatsby Purple",
-      "value": "#639"
-    },
-    {
-      "name": "Go Cyan",
-      "value": "#5dc9e2"
-    },
-    {
-      "name": "Java Blue-Gray",
-      "value": "#557c9b"
-    },
-    {
-      "name": "JavaScript Yellow",
-      "value": "#f9e64f"
-    },
-    {
-      "name": "Mandalorian Blue",
-      "value": "#1857a4"
-    },
-    {
-      "name": "Node Green",
-      "value": "#215732"
-    },
-    {
-      "name": "React Blue",
-      "value": "#00b3e6"
-    },
-    {
-      "name": "Something Different",
-      "value": "#832561"
-    },
-    {
-      "name": "Vue Green",
-      "value": "#42b883"
-    }
-  ],
   "files.hotExit": "onExit",
-  "todo-tree.tree.showScanModeButton": false,
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "java.semanticHighlighting.enabled": true,
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "python.languageServer": "Default",
   "java.project.importHint": false,
-  "java.requirements.JDK11Warning": false,
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -171,19 +94,8 @@
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "tabnine.experimentalAutoImports": true,
   "workbench.colorTheme": "Default Light+",
   "prettier.singleQuote": true,
-  "spellright.language": [
-    "de_AT",
-    "en_GB"
-  ],
-  "spellright.documentTypes": [
-    "markdown",
-    "latex",
-    "plaintext"
-  ],
-  "debug.javascript.usePreview": false,
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -198,7 +110,6 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "workbench.iconTheme": "material-icon-theme",
   "git.openRepositoryInParentFolders": "never",
-  "markdown-preview-enhanced.previewTheme": "github-light.css",
   "markdown-pdf.plantumlOpenMarker": "```plantuml",
   "markdown-pdf.plantumlCloseMarker": "```",
   "markdown-pdf.plantumlServer": "https://mode.fh-joanneum.at/-/plantuml",
@@ -213,7 +124,7 @@
     "microcontrollers"
   ],
   "editor.renderWhitespace": "all",
-  "window.zoomLevel": 2,
+  "window.zoomLevel": 1.3,
   "cSpell.enableFiletypes": [
     "typst"
   ],
@@ -221,18 +132,18 @@
 }
 /*
 Extenstions:
+autopep8: https://marketplace.visualstudio.com/items?itemName=ms-python.autopep8
+Git History: https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory
+Go: https://marketplace.visualstudio.com/items?itemName=golang.Go
 LaTeX Workshop: https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop
+Typst LSP: https://marketplace.visualstudio.com/items?itemName=nvarner.typst-lsp
 Markdown All in One: https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one
 Markdown PDF: https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf
 Prettier - Code formatter: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
-Spell Right: https://marketplace.visualstudio.com/items?itemName=ban.spellright
 Todo Tree: https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree
 Vim: https://marketplace.visualstudio.com/items?itemName=vscodevim.vim
-Angular Essentials: https://marketplace.visualstudio.com/items?itemName=johnpapa.angular-essentials
-DotENV: https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv
 JSON Tools: https://marketplace.visualstudio.com/items?itemName=eriklynd.json-tools
 Rainbow CSV: https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv
-Remote FS: https://marketplace.visualstudio.com/items?itemName=liximomo.remotefs
 Python Extension Pack: https://marketplace.visualstudio.com/items?itemName=donjayamanne.python-extension-pack
 Java Extension Pack: https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack
 Code Spell Checker: https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker
