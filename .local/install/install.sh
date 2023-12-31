@@ -45,6 +45,12 @@ tmuxtheme() {
   fi 
 }
 
+alacrittytheme() {
+  if [ ! -d $HOME/.config/alacritty/themes ]; then
+    git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
+  fi
+}
+
 command -v git > /dev/null 2>&1 || { 
   echo "could not find git! please install git and run script again"
   exit 1
@@ -90,3 +96,6 @@ unset -f ohmyzsh
 
 tmuxtheme
 unset -f tmuxtheme
+
+alacrittytheme
+unset -f alacrittytheme
