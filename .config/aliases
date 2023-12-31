@@ -139,6 +139,33 @@ earmic() {
   pacmd set-card-profile $BT_CARD $PROFILE
 }
 
+# efi-boot change nextBoot
+reboot() {
+  if ! type efibootmgr > /dev/null; then
+    systemctl reboot
+  fi
+
+  LINUX=`efibootmgr | grep grub | cut -d '*' -f1`
+  WINDOWS=`efibootmgr | grep Windows | cut -d '*' -f1`
+
+  case $1 in
+    linux|Linux|LINUX)
+      BOOT_NEXT=${LINUX:4:9}
+      ;;
+    windows|Windows|WINDOWS)
+      BOOT_NEXT=${WINDOWS:4:9}
+      ;;
+  esac
+
+  if [ -n "$BOOT_NEXT" ]; then
+    echo "set BootNext to $BOOT_NEXT"
+    sudo efibootmgr --bootnext=$BOOT_NEXT
+  fi
+
+  sleep 3
+
+  systemctl reboot
+}
 
 unset -f command_exists
 
