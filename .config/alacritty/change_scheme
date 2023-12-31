@@ -1,17 +1,18 @@
 #!/bin/bash
-ALACRITTY_CONF="$HOME/.config/alacritty/alacritty.yml"
+ALACRITTY_CONF="$HOME/.config/alacritty/alacritty.toml"
 
 case "$1" in
   l*)
-    SCHEME=slight
+    THEME=papertheme
     OPACITY=1.0
     ;;
   d*)
-    SCHEME=dracula
+    THEME=taerminal
     OPACITY=0.95
     ;;
   *) exit 1 ;;
 esac
 
-sed -i -r "s/(^colors: \*)(\w*)/\1${SCHEME}/" ${ALACRITTY_CONF} && sed -i -r "s/(^background_opacity: )([0-9\.]+)/\1${OPACITY}/" ${ALACRITTY_CONF}
+sed -i -re "/config\/alacritty\/themes/ s/(\/themes\/themes\/)(\w+)\.toml/\1${THEME}.toml/" ${ALACRITTY_CONF}
+sed -i -r "s/(^opacity = )(.*)/\1${OPACITY}/" ${ALACRITTY_CONF}
 

@@ -1,0 +1,19 @@
+[keyboard]
+bindings = [
+  { key = "V", mods = "Control|Shift", action = "Paste" },
+  { key = "C", mods = "Control|Shift", action = "Copy" },
+  { key = "T", mods = "Control|Shift", action = "SpawnNewInstance" },
+
+  { key = "Equals", mods = "Control", action = "IncreaseFontSize" },
+  { key = "Minus", mods = "Control", action = "DecreaseFontSize" },
+  { key = "Return", mods = "Control|Shift", action = "ResetFontSize" },
+  { key = "PageUp", mods = "Shift", action = "ScrollPageUp" },
+  { key = "PageUp", mods = "Control|Shift", action = "ScrollToTop" },
+  { key = "PageDown", mods = "Shift", action = "ScrollPageDown" },
+  { key = "PageDown", mods = "Control|Shift", action = "ScrollToBottom" },
+
+  { key = "F12", chars = "/bin/bash ~/.config/alacritty/change_scheme dark" },
+  { key = "F11", chars = "/bin/bash ~/.config/alacritty/change_scheme light" },
+#  { key = "F11", command = { program = "/bin/bash", args = ["~/.config/alacritty/change_scheme","light"] } },
+]
+

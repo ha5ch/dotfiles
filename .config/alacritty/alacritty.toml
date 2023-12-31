@@ -1,0 +1,50 @@
+# import additional configs, e.g. key bindings
+import = [
+  "~/.config/alacritty/themes/themes/taerminal.toml",
+  "~/.config/alacritty/keybindings.toml",
+]
+
+live_config_reload = true
+
+# set/override environment variables
+# that should be set when starting
+# alacritty
+[env]
+
+
+[window]
+dimensions = { columns = 100, lines = 35 }
+position = "None"
+padding = { x = 5, y = 5 }
+dynamic_padding = false
+decorations = "Full"
+opacity = 0.95
+startup_mode = "Windowed"
+title = "Terminal"
+dynamic_title = true
+class = { instance = "Terminal", general = "Terminal" }
+decorations_theme_variant = "None" # "Dark" | "Light" | "None"
+
+[scrolling]
+history = 10000
+multiplier = 4
+
+[font]
+normal = { family = "monospace", style = "Regular" }
+bold = { style = "Bold" }
+italic = { style = "Italic" }
+bold_italic = { style = "Bold Italic" }
+size = 13.0
+offset = { x = 0, y = 1 }
+glyph_offset = { x = 0, y = 0 }
+builtin_box_drawing = true
+
+[selection]
+save_to_clipboard = true
+
+[cursor]
+style = { shape = "Block", blinking = "Never" }
+
+[mouse]
+hide_when_typing = true
+
