@@ -22,7 +22,7 @@ opacity = 0.95
 startup_mode = "Windowed"
 title = "Terminal"
 dynamic_title = true
-class = { instance = "Terminal", general = "Terminal" }
+class = { instance = "Alacritty", general = "Alacritty" }
 decorations_theme_variant = "None" # "Dark" | "Light" | "None"
 
 [scrolling]
