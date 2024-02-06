@@ -1,3 +1,8 @@
+if has('nvim')
+  source ~/.config/nvim/init.vim
+  finish
+endif
+
 syntax on
 set number
 set relativenumber
