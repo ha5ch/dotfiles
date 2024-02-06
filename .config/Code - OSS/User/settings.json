@@ -130,6 +130,7 @@
   "go.toolsManagement.autoUpdate": true,
   "security.workspace.trust.untrustedFiles": "open",
   "window.zoomLevel": 1,
+  "markdown.extension.italic.indicator": "_",
 }
 /*
 Extenstions:

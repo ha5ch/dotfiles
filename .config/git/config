@@ -1,8 +1,8 @@
 # This is Git's per-user configuration file.
 [user]
 # Please adapt and uncomment the following lines:
-name = Harald Schwab
-email = hs@rigbit.at
+  name = Harald Schwab
+  email = hs@rigbit.at
 [pull]
 	rebase = false
 	ff = only
@@ -28,3 +28,14 @@ email = hs@rigbit.at
 	defaultBranch = main
 [push]
 	autoSetupRemote = true
+[credential]
+	helper = cache --timeout=90
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
