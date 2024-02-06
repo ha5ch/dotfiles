@@ -13,9 +13,9 @@
     "command": "workbench.action.terminal.toggleTerminal"
   },
   {
-    "key": "ctrl+j",
+    "key": "ctrl+shift+t",
     "command": "workbench.action.focusActiveEditorGroup",
-    "when": "!terminalFocus"
+    "when": "terminalFocus"
   },
   {
     "key": "alt+k",
