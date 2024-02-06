@@ -75,7 +75,7 @@
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "python.languageServer": "Default",
   "java.project.importHint": false,
@@ -113,7 +113,7 @@
   "markdown-pdf.plantumlOpenMarker": "```plantuml",
   "markdown-pdf.plantumlCloseMarker": "```",
   "markdown-pdf.plantumlServer": "https://mode.fh-joanneum.at/-/plantuml",
-  "cSpell.language": "en,de-AT",
+  "cSpell.language": "en,de-AT,de",
   "workbench.editorAssociations": {
     "*.pdf": "latex-workshop-pdf-hook"
   },
@@ -124,11 +124,12 @@
     "microcontrollers"
   ],
   "editor.renderWhitespace": "all",
-  "window.zoomLevel": 1.3,
   "cSpell.enableFiletypes": [
     "typst"
   ],
   "go.toolsManagement.autoUpdate": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "window.zoomLevel": 1,
 }
 /*
 Extenstions:
