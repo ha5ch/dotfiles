@@ -125,6 +125,17 @@ if [ -d $HOME/.local/go/bin ]; then
   export PATH=$PATH:$HOME/.local/go/bin
 fi
 
+# pandoc
+if [ -x "$(command -v pandoc)" ]; then
+  alias pd=pandoc
+elif [ -x "$(command -v docker)" ]; then
+  alias pandoc='docker run --user $(id -u $USER):$(id -g ${USER}) --rm --volume "$(pwd):/data" pandoc/core'
+  alias pd=pandoc
+  compdef pandoc='pandoc'
+  compdef pd='pandoc'
+  setopt completealiases
+fi
+
 # bluetooth
 ## source: https://bbs.archlinux.org/viewtopic.php?id=258363; https://unix.stackexchange.com/questions/508221/bluetooth-service-running-but-bluetoothctl-says-org-bluez-error-notready
 earmic() {
