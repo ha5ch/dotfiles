@@ -16,6 +16,7 @@ plugins=(
   vi-mode
   zsh-autosuggestions
   zsh-nvm
+  direnv
 )
 source $ZSH/oh-my-zsh.sh
 
