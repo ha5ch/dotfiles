@@ -30,5 +30,15 @@
   {
     "key": "shift+alt+t",
     "command": "workbench.action.toggleMaximizedPanel"
+  },
+  {
+    "key": "ctrl+oem_8",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+    "key": "ctrl+shift+oem_8",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
   }
 ]
