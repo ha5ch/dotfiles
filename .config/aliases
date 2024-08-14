@@ -99,7 +99,7 @@ if command_exists tmux; then
 fi
 
 # java
-for V in {7..20}; do
+for V in {7..40}; do
   OPENJDK="/usr/lib/jvm/java-${V}-openjdk"
   [ -d $OPENJDK ] && alias \
     java${V}=${OPENJDK}/bin/java \
