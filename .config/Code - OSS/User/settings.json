@@ -132,6 +132,9 @@
   "window.zoomLevel": 1,
   "markdown.extension.italic.indicator": "_",
   "plantuml.server": "https://mode.fh-joanneum.at/-/plantuml",
+  "markdown-preview-enhanced.plantumlJarPath": "~/.local/bin/plantuml.jar",
+  "workbench.experimental.enableNewProfilesUI": true,
+  "window.newWindowProfile": "Default",
 }
 /*
 Extenstions:
