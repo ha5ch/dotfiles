@@ -1,157 +1,85 @@
 {
   "editor.tabSize": 2,
+  "editor.fontFamily": "'JetBrains Mono', 'Droid Sans Mono', 'monospace', monospace",
+  "editor.fontSize": 16,
+  "editor.renderWhitespace": "all",
+  "editor.suggestSelection": "first",
+  "editor.unicodeHighlight.nonBasicASCII": true,
+  "editor.wordWrap": "on",
+  "terminal.integrated.fontFamily": "'Source Code Pro', 'JetBrains Mono', 'Droid Sans Mono', 'monospace', monospace",
+  "terminal.integrated.fontSize": 16,
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 5000,
   "files.associations": {
     "*.html": "html"
   },
+  "files.hotExit": "onExit",
+  "files.trimTrailingWhitespace": true,
+  "git.openRepositoryInParentFolders": "never",
+  "window.titleBarStyle": "custom",
+  "window.zoomLevel": 1,
+  "window.newWindowProfile": "Default",
+  "workbench.colorTheme": "Default Light+",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.experimental.enableNewProfilesUI": true,
+  "cSpell.language": "en,de,de-AT,en-GB,en-US",
+  "markdown.extension.italic.indicator": "_",
+  "markdown-pdf.plantumlOpenMarker": "```plantuml",
+  "markdown-pdf.plantumlCloseMarker": "```",
+  "markdown-pdf.plantumlServer": "https://mode.fh-joanneum.at/-/plantuml",
   "vim.useCtrlKeys": false,
   "vim.useSystemClipboard": true,
-  "keyboard.dispatch": "keyCode",
-  "latex-workshop.latex.recipes": [
-    {
-      "name": "pdflatex fh-toolchain",
-      "tools": [
-        "create_tmp",
-        "pdflatex",
-        "biber",
-        "pdflatex"
-      ]
-    }
-  ],
-  "latex-workshop.latex.tools": [
-    {
-      "name": "biber",
-      "command": "biber",
-      "args": [
-        "./tmp/thesis.bcf"
-      ]
-    },
-    {
-      "name": "pdflatex",
-      "command": "pdflatex",
-      "args": [
-        "-output-directory=tmp",
-        "%DOC%"
-      ]
-    },
-    {
-      "name": "create_tmp",
-      "command": "mkdir",
-      "args": [
-        "-p",
-        "./tmp"
-      ]
-    }
-  ],
-  "latex-workshop.view.pdf.viewer": "tab",
-  "latex-workshop.latex.outDir": "./tmp",
-  "window.titleBarStyle": "custom",
-  "editor.fontFamily": "'JetBrains Mono','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-  "terminal.integrated.fontFamily": "\"Source Code Pro\",\"Meslo LG M DZ for Powerline\"",
-  "terminal.integrated.fontSize": 16,
-  "java.errors.incompleteClasspath.severity": "ignore",
-  "todo-tree.highlights.customHighlight": {
-    "TODO": {},
-    "FIXME": {}
-  },
-  "todo-tree.highlights.defaultHighlight": {
-    "foreground": "green",
-    "type": "none"
-  },
-  "todo-tree.regex.regex": "((//|#|%+?|<!--|;|/\\*|^)\\s*($TAGS)|^\\s*- \\[ \\])",
-  "todo-tree.general.tags": [
-    "TODO",
-    "FIXME",
-    "todo"
-  ],
+  "vim.vimrc.enable": true,
+  "vim.vimrc.path": "~/.config/vim/vimrc",
   "[python]": {
+    "diffEditor.ignoreTrimWhitespace": false,
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
     "editor.formatOnType": true,
-    "editor.defaultFormatter": "ms-python.autopep8"
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.wordBasedSuggestions": "off"
   },
-  "files.hotExit": "onExit",
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "java.errors.incompleteClasspath.severity": "ignore",
+  "java.project.importHint": false,
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java",
+    "editor.suggest.snippetsPreventQuickSuggestions": false
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "[go]": {
+    "editor.insertSpaces": false,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always"
+    }
+  },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "python.languageServer": "Default",
-  "java.project.importHint": false,
-  "[vue]": {
+  "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "javascript.updateImportsOnFileMove.enabled": "always",
   "[javascript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "prettier.singleQuote": true
   },
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
+    "editor.defaultFormatter": "vscode.typescript-language-features",
+    "prettier.singleQuote": true
   },
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "workbench.colorTheme": "Default Light+",
-  "prettier.singleQuote": true,
   "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "vim.vimrc.enable": true,
-  "vim.vimrc.path": "~/.config/vim/vimrc",
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.unicodeHighlight.nonBasicASCII": false,
-  "editor.fontSize": 16,
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "workbench.iconTheme": "material-icon-theme",
-  "git.openRepositoryInParentFolders": "never",
-  "markdown-pdf.plantumlOpenMarker": "```plantuml",
-  "markdown-pdf.plantumlCloseMarker": "```",
-  "markdown-pdf.plantumlServer": "https://mode.fh-joanneum.at/-/plantuml",
-  "cSpell.language": "en,de-AT,de",
-  "workbench.editorAssociations": {
-    "*.pdf": "latex-workshop-pdf-hook"
+    "editor.defaultFormatter": "vscode.css-language-features"
   },
   "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "cSpell.userWords": [
-    "microcontrollers"
-  ],
-  "editor.renderWhitespace": "all",
-  "cSpell.enableFiletypes": [
-    "typst"
-  ],
-  "go.toolsManagement.autoUpdate": true,
-  "security.workspace.trust.untrustedFiles": "open",
-  "window.zoomLevel": 1,
-  "markdown.extension.italic.indicator": "_",
-  "plantuml.server": "https://mode.fh-joanneum.at/-/plantuml",
-  "markdown-preview-enhanced.plantumlJarPath": "~/.local/bin/plantuml.jar",
-  "workbench.experimental.enableNewProfilesUI": true,
-  "window.newWindowProfile": "Default",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "files.trimTrailingWhitespace": false,
+    "cSpell.fixSpellingWithRenameProvider": true,
+    "cSpell.advanced.feature.useReferenceProviderWithRename": true,
+    "cSpell.advanced.feature.useReferenceProviderRemove": "/^#+\\s/"
+  }
 }
-/*
-Extenstions:
-autopep8: https://marketplace.visualstudio.com/items?itemName=ms-python.autopep8
-Git History: https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory
-Go: https://marketplace.visualstudio.com/items?itemName=golang.Go
-LaTeX Workshop: https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop
-Typst LSP: https://marketplace.visualstudio.com/items?itemName=nvarner.typst-lsp
-Markdown All in One: https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one
-Markdown PDF: https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf
-Prettier - Code formatter: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
-Todo Tree: https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree
-Vim: https://marketplace.visualstudio.com/items?itemName=vscodevim.vim
-JSON Tools: https://marketplace.visualstudio.com/items?itemName=eriklynd.json-tools
-Rainbow CSV: https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv
-Python Extension Pack: https://marketplace.visualstudio.com/items?itemName=donjayamanne.python-extension-pack
-Java Extension Pack: https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack
-Code Spell Checker: https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker
-Code Spell Checker - German: https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker-german
-*/
