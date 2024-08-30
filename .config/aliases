@@ -65,7 +65,7 @@ alias \
   df="df -h" \
   du="du -h" \
   se="sudoedit" \
-  sudo='sudo ' \
+  #sudo='sudo ' \
 ;
 export LESS="-F -X $LESS" ## let less display information, that fits the screen directly
 
