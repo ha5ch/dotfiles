@@ -40,5 +40,10 @@
     "key": "ctrl+shift+oem_8",
     "command": "workbench.action.terminal.new",
     "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+  },
+  {
+    "key": "ctrl+oem_8",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
   }
 ]
