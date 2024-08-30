@@ -50,6 +50,7 @@ get_env() {
 ;
 
 # filesystem
+alias ls="ls --group-directories-first --color=auto"
 alias \
   cd..="cd .." \
   ll="ls -hlF" \
