@@ -2,8 +2,9 @@
   "editor.tabSize": 2,
   "editor.fontFamily": "'JetBrains Mono', 'Droid Sans Mono', 'monospace', monospace",
   "editor.fontSize": 16,
+  "editor.minimap.enabled": false,
   "editor.renderWhitespace": "all",
-  "editor.suggestSelection": "first",
+  "editor.suggestSelection": "recentlyUsedByPrefix",
   "editor.unicodeHighlight.nonBasicASCII": true,
   "editor.wordWrap": "on",
   "terminal.integrated.fontFamily": "'Source Code Pro', 'JetBrains Mono', 'Droid Sans Mono', 'monospace', monospace",
@@ -81,5 +82,11 @@
     "cSpell.fixSpellingWithRenameProvider": true,
     "cSpell.advanced.feature.useReferenceProviderWithRename": true,
     "cSpell.advanced.feature.useReferenceProviderRemove": "/^#+\\s/"
+  },
+  "tinymist.formatterMode": "typstyle",
+  "[typst]": {
+    "editor.semanticHighlighting.enabled": true,
+    "editor.formatOnSave": true,
+    "editor.suggest.selectionMode": "whenQuickSuggestion"
   }
 }
