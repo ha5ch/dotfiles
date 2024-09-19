@@ -22,7 +22,7 @@
   "window.newWindowProfile": "Default",
   "workbench.colorTheme": "Default Light+",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.experimental.enableNewProfilesUI": true,
+  "keyboard.dispatch": "keyCode",
   "cSpell.language": "en,de,de-AT,en-GB,en-US",
   "markdown.extension.italic.indicator": "_",
   "markdown-pdf.plantumlOpenMarker": "```plantuml",
