@@ -1,10 +1,3 @@
-# import additional configs, e.g. key bindings
-import = [
-  "~/.config/alacritty/themes/themes/taerminal.toml",
-  "~/.config/alacritty/keybindings.toml",
-]
-
-live_config_reload = true
 
 # set/override environment variables
 # that should be set when starting
@@ -47,4 +40,13 @@ style = { shape = "Block", blinking = "Never" }
 
 [mouse]
 hide_when_typing = true
+
+[general]
+
+live_config_reload = true
+# import additional configs, e.g. key bindings
+import = [
+  "~/.config/alacritty/themes/themes/taerminal.toml",
+  "~/.config/alacritty/keybindings.toml",
+]
 
