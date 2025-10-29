@@ -9,6 +9,8 @@
   "editor.wordWrap": "on",
   "terminal.integrated.fontFamily": "monospace",
   "terminal.integrated.fontSize": 16,
+  "terminal.integrated.suggest.inlineSuggestion": "off",
+  "terminal.integrated.stickyScroll.enabled": false,
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 5000,
   "files.associations": {
@@ -46,6 +48,7 @@
     "editor.defaultFormatter": "redhat.java",
     "editor.suggest.snippetsPreventQuickSuggestions": false
   },
+  "maven.executable.options": "-DinteractiveMode=false",
   "go.toolsManagement.autoUpdate": true,
   "[go]": {
     "editor.insertSpaces": false,
@@ -87,6 +90,17 @@
   "[typst]": {
     "editor.semanticHighlighting.enabled": true,
     "editor.formatOnSave": true,
-    "editor.suggest.selectionMode": "whenQuickSuggestion"
-  }
+    "editor.suggest.selectionMode": "whenQuickSuggestion",
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
+  },
+  "chat.commandCenter.enabled": false,
+  "[typst-code]": {
+    "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
+  },
+  "inlineChat.lineNaturalLanguageHint": false,
+  "cSpell.userWords": [
+    "center"
+  ],
+  "chat.disableAIFeatures": true,
+  "workbench.startupEditor": "none"
 }
