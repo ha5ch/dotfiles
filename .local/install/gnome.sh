@@ -50,6 +50,7 @@ function themes {
       [ -f $THEMES_INST/$THEME_DIR/install.sh ] && {
         ## TODO: this options currently only work for Colloid!
         $THEMES_INST/$THEME_DIR/install.sh -d $THEMES_HOME -t green -c dark --tweaks rimless
+        $THEMES_INST/$THEME_DIR/install.sh -d $THEMES_HOME -t green -c light --tweaks rimless
       }
     } || {
       cd $THEMES_INST
