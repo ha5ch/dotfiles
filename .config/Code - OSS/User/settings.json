@@ -1,4 +1,15 @@
 {
+  // // Custom Settings for Teaching to use simple shell/prompt
+  //   "terminal.integrated.profiles.linux": {
+  //     "vscodeBash": {
+  //         "path": "/bin/bash",
+  //         "args": [ "-i" ],
+  //         "env": {
+  //             "CUSTOM_PROMPT": "$ "
+  //         }
+  //     }
+  // },
+  // "terminal.integrated.defaultProfile.linux": "vscodeBash",
   "editor.tabSize": 2,
   "editor.fontFamily": "'JetBrains Mono', 'Droid Sans Mono', 'monospace', monospace",
   "editor.fontSize": 16,
