@@ -61,6 +61,9 @@ compinit
 
 [ -d ~/.config/go/bin ] && export PATH=$PATH:$HOME/.config/go/bin
 
+# rustup
+[ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
+
 if [ -d ~/.npm-global/bin ]; then
   export PATH=${PATH}:${HOME}/.npm-global/bin
 fi
