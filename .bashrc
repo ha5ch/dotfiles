@@ -32,3 +32,9 @@ PS1="\[$(tput setaf 7)\][\[$(tput setaf 2)\]\u\[$(tput setaf 7)\]@\[$(tput setaf
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+. "$HOME/.cargo/env"
+
+# custom prompt, e.g. from VS Code
+[ "$TERM_PROGRAM" = "vscode" ] && PS1='$ '
+[ -n "$CUSTOM_PROMPT" ] && PS1=$CUSTOM_PROMPT
+
