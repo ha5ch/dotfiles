@@ -102,5 +102,8 @@
     "center"
   ],
   "chat.disableAIFeatures": true,
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "extensions.ignoreRecommendations": true,
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "workbench.settings.showAISearchToggle": false
 }
