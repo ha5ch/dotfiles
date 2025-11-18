@@ -14,6 +14,7 @@
   "editor.fontFamily": "'JetBrains Mono', 'Droid Sans Mono', 'monospace', monospace",
   "editor.fontSize": 16,
   "editor.minimap.enabled": false,
+  "editor.inlayHints.enabled": "off",
   "editor.renderWhitespace": "all",
   "editor.suggestSelection": "recentlyUsedByPrefix",
   "editor.unicodeHighlight.nonBasicASCII": true,
@@ -54,6 +55,7 @@
     "editor.wordBasedSuggestions": "off"
   },
   "java.errors.incompleteClasspath.severity": "ignore",
+
   "java.project.importHint": false,
   "[java]": {
     "editor.defaultFormatter": "redhat.java",
@@ -109,12 +111,11 @@
     "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
   },
   "inlineChat.lineNaturalLanguageHint": false,
-  "cSpell.userWords": [
-    "center"
-  ],
+  "cSpell.userWords": ["center"],
   "chat.disableAIFeatures": true,
   "workbench.startupEditor": "none",
   "extensions.ignoreRecommendations": true,
   "workbench.secondarySideBar.defaultVisibility": "hidden",
-  "workbench.settings.showAISearchToggle": false
+  "workbench.settings.showAISearchToggle": false,
+  "redhat.telemetry.enabled": false
 }
