@@ -24,6 +24,8 @@ PS1="\[$(tput setaf 7)\][\[$(tput setaf 2)\]\u\[$(tput setaf 7)\]@\[$(tput setaf
     la='ll -A' \
 ;
 
+export LESS="-FXR"
+
 # add ~/.local/bin to PATH
 [ -d ~/.local/bin ] && export PATH=${PATH}:${HOME}/.local/bin
 
