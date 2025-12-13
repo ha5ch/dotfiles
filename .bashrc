@@ -40,3 +40,9 @@ export NVM_DIR="$HOME/.config/nvm"
 [ "$TERM_PROGRAM" = "vscode" ] && PS1='$ '
 [ -n "$CUSTOM_PROMPT" ] && PS1=$CUSTOM_PROMPT
 
+# pyenv
+if [ -d $HOME/.pyenv ]; then
+  export PYENV_ROOT="$HOME/.pyenv"
+  [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init - bash)"
+fi
