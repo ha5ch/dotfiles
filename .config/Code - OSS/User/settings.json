@@ -23,6 +23,7 @@
   "terminal.integrated.fontSize": 16,
   "terminal.integrated.suggest.inlineSuggestion": "off",
   "terminal.integrated.stickyScroll.enabled": false,
+  "terminal.integrated.suggest.enabled": false,
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 5000,
   "files.associations": {
@@ -33,9 +34,14 @@
   "git.openRepositoryInParentFolders": "never",
   "window.titleBarStyle": "custom",
   "window.zoomLevel": 1,
-  "window.newWindowProfile": "Default",
   "workbench.colorTheme": "Default Light+",
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "none",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "workbench.settings.showAISearchToggle": false,
+  "chat.commandCenter.enabled": false,
+  "chat.disableAIFeatures": true,
+  "inlineChat.lineNaturalLanguageHint": false,
   "keyboard.dispatch": "keyCode",
   "cSpell.language": "en,de,de-AT,en-GB,en-US",
   "markdown.extension.italic.indicator": "_",
@@ -46,6 +52,8 @@
   "vim.useSystemClipboard": true,
   "vim.vimrc.enable": true,
   "vim.vimrc.path": "~/.config/vim/vimrc",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.terminal.activateEnvironment": false,
   "[python]": {
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.tabSize": 4,
@@ -55,12 +63,12 @@
     "editor.wordBasedSuggestions": "off"
   },
   "java.errors.incompleteClasspath.severity": "ignore",
-
   "java.project.importHint": false,
   "[java]": {
     "editor.defaultFormatter": "redhat.java",
     "editor.suggest.snippetsPreventQuickSuggestions": false
   },
+  "redhat.telemetry.enabled": false,
   "maven.executable.options": "-DinteractiveMode=false",
   "go.toolsManagement.autoUpdate": true,
   "[go]": {
@@ -106,16 +114,8 @@
     "editor.suggest.selectionMode": "whenQuickSuggestion",
     "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
   },
-  "chat.commandCenter.enabled": false,
   "[typst-code]": {
     "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
   },
-  "inlineChat.lineNaturalLanguageHint": false,
-  "cSpell.userWords": ["center"],
-  "chat.disableAIFeatures": true,
-  "workbench.startupEditor": "none",
-  "extensions.ignoreRecommendations": true,
-  "workbench.secondarySideBar.defaultVisibility": "hidden",
-  "workbench.settings.showAISearchToggle": false,
-  "redhat.telemetry.enabled": false
+  "extensions.ignoreRecommendations": true
 }
