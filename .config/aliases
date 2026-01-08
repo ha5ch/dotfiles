@@ -116,8 +116,10 @@ done
 
 # android
 if [ -d $HOME/.local/Android/Sdk ]; then
-  export ANDROID_SDK_ROOT=$HOME/.local/Android/Sdk
+  export ANDROID_HOME=$HOME/.local/Android/Sdk
+  export ANDROID_SDK_ROOT=$ANDROID_HOME
   export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/emulator
+  [ -d $HOME/.config/.android/avd ] && export ANDROID_AVD_HOME=$HOME/.config/.android/avd
 fi
 
 # go
