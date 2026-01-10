@@ -127,6 +127,11 @@ if [ -d $HOME/.local/go/bin ]; then
   export PATH=$PATH:$HOME/.local/go/bin
 fi
 
+# rust/cargo
+if [ -d $HOME/.cargo/bin ]; then
+  export PATH=$PATH:$HOME/.cargo/bin
+fi
+
 # pandoc
 if [ -x "$(command -v pandoc)" ]; then
   alias pd=pandoc
