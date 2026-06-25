@@ -34,7 +34,7 @@
   "git.openRepositoryInParentFolders": "never",
   "window.titleBarStyle": "custom",
   "window.zoomLevel": 1,
-  "workbench.colorTheme": "Default Light+",
+  "workbench.colorTheme": "Light+",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none",
   "workbench.secondarySideBar.defaultVisibility": "hidden",
@@ -53,13 +53,14 @@
   "vim.vimrc.enable": true,
   "vim.vimrc.path": "~/.config/vim/vimrc",
   "python.analysis.typeCheckingMode": "basic",
+  "python.languageServer": "None",
   "python.terminal.activateEnvironment": false,
   "[python]": {
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.tabSize": 4,
     "editor.insertSpaces": true,
     "editor.formatOnType": true,
-    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.wordBasedSuggestions": "off"
   },
   "java.errors.incompleteClasspath.severity": "ignore",
@@ -118,5 +119,7 @@
     "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?"
   },
   "extensions.ignoreRecommendations": true,
-  "terminal.integrated.initialHint": false
+  "terminal.integrated.initialHint": false,
+  "window.autoDetectColorScheme": true,
+  "workbench.preferredDarkColorTheme": "Light Modern"
 }
