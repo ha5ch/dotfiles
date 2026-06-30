@@ -75,5 +75,11 @@ then
   export PATH=~/.local/bin:$PATH
 fi
 
+# re-activate WAYLAND_DISPLAY in alacritty
+if [ -z "$WAYLAND_DISPLAY" ] && [ -n "$XDG_RUNTIME_DIR" ]; then
+    sock=$(ls "$XDG_RUNTIME_DIR"/wayland-* 2>/dev/null | grep -v '\.lock$' | head -n1)
+    [ -n "$sock" ] && export WAYLAND_DISPLAY="$(basename "$sock")"
+fi
+
 # vim mode
 bindkey -v

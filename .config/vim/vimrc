@@ -22,6 +22,7 @@ set hidden
 set backspace=indent,eol,start
 set mouse=a
 set viminfo+=n~/.config/vim/viminfo
+set clipboard=unnamedplus
 
 "different indention for python
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
