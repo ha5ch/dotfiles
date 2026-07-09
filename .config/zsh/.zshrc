@@ -75,6 +75,11 @@ then
   export PATH=~/.local/bin:$PATH
 fi
 
+# kind podman backend
+if (( $+commands[kind] && $+commands[podman] )); then
+  export KIND_EXPERIMENTAL_PROVIDER=podman
+fi
+
 # re-activate WAYLAND_DISPLAY in alacritty
 if [ -z "$WAYLAND_DISPLAY" ] && [ -n "$XDG_RUNTIME_DIR" ]; then
     sock=$(ls "$XDG_RUNTIME_DIR"/wayland-* 2>/dev/null | grep -v '\.lock$' | head -n1)
