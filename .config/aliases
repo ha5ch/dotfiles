@@ -145,6 +145,15 @@ elif [ -x "$(command -v docker)" ]; then
   fi
 fi
 
+# kubectl
+if [ -d "$HOME/.config/kube" ]; then
+  KUBECONFIG=$(find "$HOME/.config/kube" -name '*.yaml' | sort | paste -sd: -)
+fi
+if [ -f "$HOME/.kube/config" ]; then
+  KUBECONFIG="$HOME/.kube/config${KUBECONFIG:+:$KUBECONFIG}"
+fi
+[ -n "$KUBECONFIG" ] && export KUBECONFIG
+
 # bluetooth
 ## source: https://bbs.archlinux.org/viewtopic.php?id=258363; https://unix.stackexchange.com/questions/508221/bluetooth-service-running-but-bluetoothctl-says-org-bluez-error-notready
 earmic() {
