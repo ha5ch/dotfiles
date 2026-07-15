@@ -19,6 +19,7 @@ plugins=(
   direnv
 )
 source $ZSH/oh-my-zsh.sh
+unsetopt correct_all
 
 ## get System.d compatible environments and export them for session
 [ -d ~/.config/environment.d ] && \
