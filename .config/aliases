@@ -172,6 +172,7 @@ earmic() {
 reboot() {
   if ! type efibootmgr > /dev/null; then
     systemctl reboot
+    return
   fi
 
   LINUX=`efibootmgr | grep grub | cut -d '*' -f1`
