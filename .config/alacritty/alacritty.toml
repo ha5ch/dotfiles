@@ -50,3 +50,6 @@ import = [
   "~/.config/alacritty/keybindings.toml",
 ]
 
+[bell]
+duration = 0
+command = { program = "paplay", args = ["/usr/share/sounds/freedesktop/stereo/window-attention.oga"] }
