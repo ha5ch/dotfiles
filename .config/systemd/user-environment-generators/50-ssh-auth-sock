@@ -1,0 +1,8 @@
+#!/bin/sh
+rt="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
+if [ -e /usr/lib/systemd/user/gcr-ssh-agent.socket ]; then
+  echo "SSH_AUTH_SOCK=$rt/gcr/ssh"
+else
+  echo "SSH_AUTH_SOCK=$rt/ssh-agent.socket"
+fi
+
