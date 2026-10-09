@@ -1,6 +1,18 @@
 // Place your key bindings in this file to overwrite the defaults
 [
   {
+    "key": "shift+alt+f",
+    "command": "runCommands",
+    "args": { "commands": ["ruff.executeOrganizeImports", "editor.action.formatDocument"] },
+    "when": "!isLinux && editorTextFocus && editorLangId == python"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "runCommands",
+    "args": { "commands": ["ruff.executeOrganizeImports", "editor.action.formatDocument"] },
+    "when": "isLinux && editorTextFocus && editorLangId == python"
+  },
+  {
     "key": "ctrl+shift+r ctrl+shift+t",
     "command": "workbench.action.reopenClosedEditor"
   },
